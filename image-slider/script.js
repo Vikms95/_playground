@@ -42,7 +42,9 @@ function next(){
         }
         let catImage = new Image()
         catImage.src = images[imageCount]
+        slider.classList.add('fade')
         slider.removeChild(slider.firstChild)
+        slider.classList.add('fade')
         slider.appendChild(catImage)
         changeDots()
     })
