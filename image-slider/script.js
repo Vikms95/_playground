@@ -26,6 +26,7 @@ function previous(){
         catImage.src = images[imageCount]
         slider.removeChild(slider.firstChild)
         slider.appendChild(catImage)
+        changeDots()
     })
 }
 
@@ -43,8 +44,18 @@ function next(){
         catImage.src = images[imageCount]
         slider.removeChild(slider.firstChild)
         slider.appendChild(catImage)
+        changeDots()
     })
+}
+
+function changeDots(){
+    const dots = Array.from(document.querySelectorAll('.dot'))
+    dots.forEach(dot=>{
+        dot.classList.remove('current')
+    })
+    dots[imageCount].classList.toggle('current')
 }
 
 previous()
 next()
+changeDots()

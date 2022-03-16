@@ -2,8 +2,18 @@
     width: 50rem;
     border: 1rem solid black;
 }
+
+
 .image-slider{
+    display: flex;
+    justify-content: center;
     height: 80vh;
+}
+
+.image-slider > img{
+    height: 600px;
+    width: 600px;
+    transition: 1s;
 }
 
 .arrows-container{
@@ -14,7 +24,10 @@
 
 button{
     background-color: red;
-    color: red;
     height: 100px;
     width: 100px;
+}
+
+.current{
+    background-color: white;
 }
