@@ -35,7 +35,7 @@ function next(){
     const arrowNext = document.querySelector('.arrow-next')
     arrowNext.addEventListener('click',()=>{
         if(imageCount === 2){
-            imageCount = 1
+            imageCount = 0
 
         }else{
             imageCount += 1
@@ -56,6 +56,27 @@ function changeDots(){
     dots[imageCount].classList.toggle('current')
 }
 
+function timeSwap(){
+    const slider = document.querySelector('.image-slider')
+
+    if(imageCount === 2){
+        imageCount = 0
+
+    }else{
+        imageCount += 1
+    }
+    let catImage = new Image()
+    catImage.src = images[imageCount]
+    slider.removeChild(slider.firstChild)
+    slider.appendChild(catImage)
+    changeDots()
+
+    setTimeout(timeSwap,5000)
+}
+
+
+
 previous()
 next()
 changeDots()
+timeSwap()
