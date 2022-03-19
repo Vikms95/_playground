@@ -9,16 +9,31 @@
   <title>Document</title>
 </head>
 <body>
-  <label for="email"> email </label>
-  <input type="email" id="email">
-  <label for="country">country</label>
-  <input type="text" id="country">
-  <label for="zip">zip</label>
-  <input type="text" id="zip">
-  <label for="pass">pass</label>
-  <input type="text" id="pass">
-  <label for="pass-conf">pass confirm</label>
-  <input type="password" id="pass-conf">
-  <button type="button">submit</button>
+  <form action="/" method="get">
+    
+    <label for="email"> email </label>
+    <input type="email" id="email" required>
+
+    <label for="country">country</label>
+    <select name="country" required>
+      <option value="spain">spain</option>
+      <option value="uk">uk</option>
+      <option value="usa">usa</option>
+      <option value="rusia">rusia</option>
+      <option value="china">china</option>
+    </select>
+
+    <label for="zip">zip</label>
+    <input type="text" pattern="(^\d{5}$)|(^\d{9}$)|(^\d{5}-\d{4}$)" id="zip" required>
+
+    <label for="pass">pass</label>
+    <input type="text" id="pass" required>
+
+    <label for="pass-conf">pass confirm</label>
+    <input type="password" id="pass-conf" required>
+
+    <button type="submit">submit</button>
+    
+  </form>
 </body>
 </html>

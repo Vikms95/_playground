@@ -1,1 +1,1 @@
-- Highlight a field red when the user clicks submit if the field is incorrect
+- Highlight a field red when the user tabs out if the field is incorrect
