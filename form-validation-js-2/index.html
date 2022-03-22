@@ -4,9 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <title>Document</title>
 </head>
 <body>
-  
+  <form action="/" method="get">
+    
+    <label for="email"> email </label>
+    <input type="email" id="email" required>
+
+    <label for="country">country</label>
+    <select name="country" required>
+      <option value="spain">spain</option>
+      <option value="uk">uk</option>
+      <option value="usa">usa</option>
+      <option value="rusia">rusia</option>
+      <option value="china">china</option>
+    </select>
+
+    <label for="zip">zip</label>
+    <input type="text" pattern="(^\d{5}$)|(^\d{9}$)|(^\d{5}-\d{4}$)" id="zip" required>
+
+    <label for="pass">pass</label>
+    <input type="text" id="pass" required>
+
+    <label for="pass-conf">pass confirm</label>
+    <input type="password" id="pass-conf" required>
+
+    <button type="submit">submit</button>
+    
+  </form>
 </body>
 </html>
